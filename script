@@ -36,7 +36,7 @@ fileInput.addEventListener('change', () => {
 fileSection.appendChild(uploadButton);
 fileSection.appendChild(fileList);
 
-// Placeholder for GitHub Integration
+// GitHub Integration
 async function fetchGitHubRepos(username) {
     try {
         const response = await fetch(`https://api.github.com/users/${username}/repos`);
@@ -63,8 +63,8 @@ async function fetchGitHubRepos(username) {
     }
 }
 
-// Fetch GitHub Repositories (Use your GitHub username when ready)
-// fetchGitHubRepos('your-github-username');
+// Fetch GitHub Repositories for PhveektorDrayne
+fetchGitHubRepos('PhveektorDrayne');
 
 // Contact Form Validation
 const contactForm = document.querySelector('form');
