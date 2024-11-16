@@ -45,7 +45,14 @@
             <div>
                 <h3>Files</h3>
                 <p>Upload, manage, and display files here.</p>
-            </div>
+                <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Upload</button>
+</form>
+<ul>
+    <?php include 'display_files.php'; ?>
+</ul>
+</div>
             <div>
                 <h3>GitHub Projects</h3>
                 <p>Explore my open-source contributions and code repositories.</p>
@@ -61,15 +68,12 @@
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <<form action="contact.php" method="POST">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+</form>
         </div>
     </section>
 
